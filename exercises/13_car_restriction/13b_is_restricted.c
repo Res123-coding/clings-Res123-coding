@@ -20,7 +20,32 @@
 enum day { MONDAY = 1, TUESDAY, WEDNESDAY, THURSDAY, FRIDAY, SATURDAY, SUNDAY };
 
 int is_restricted(int tail_num, enum day today) {
-#error TODO: Fix this exercise. Run "clings hint" for help.
+    int a;
+    switch(tail_num){
+        case 0:
+        case 5:
+            a=(today ==MONDAY) ?1:0;
+            break;
+        case 1:
+        case 6:
+            a=(today==TUESDAY)?1:0;
+            break;
+        case 2:
+        case 7:
+            a=(today==WEDNESDAY)?1:0;
+            break;
+        case 3:
+        case 8:
+            a=(today==THURSDAY)?1:0;
+            break;
+        case 4:
+        case 9:
+            a=(today==FRIDAY)?1:0;
+            break;
+        default:
+            a=0;
+            break;
+    }return a;
 }
 
 int main(void) {

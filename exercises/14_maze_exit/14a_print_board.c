@@ -19,7 +19,7 @@
 #define ROW 5
 #define COL 5
 
-int chessboard[ROW][COL];
+int chessboard[ROW][COL]={0};
 
 /* 平台无关的伪随机数生成器 (Linear Congruential Generator) */
 static unsigned int _seed = 42;
@@ -28,13 +28,29 @@ int my_rand(void) {
     return (_seed >> 16) & 0x7fff;
 }
 
-void init_chessboard(void) {
-#error TODO: Fill chessboard[i][j] = my_rand() % 2 with nested loops. Run "clings hint" for help.
+void init_chessboard(void){
+     int i,j;
+     for(i=0;i<5;i++){
+        for(j=0;j<5;j++){
+            chessboard[i][j]=my_rand()%2;
+        }
+     }
 }
 
+
 void print_chessboard(void) {
-#error TODO: Print board with nested loops, spaces between elements. Run "clings hint" for help.
+    int i,j;
+    for(i=0;i<5;i++){
+        for(j=0;j<5;j++){
+        if(j<=3)
+        printf("%d ",chessboard[i][j]);
+        else
+        printf("%d",chessboard[i][j]);
+        }
+        printf("\n");
+    }
 }
+
 
 int main(void) {
     init_chessboard();

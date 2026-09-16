@@ -15,9 +15,11 @@
  */
 
 #include <stdio.h>
-
+int sum = 0;
 int main(void) {
-#error TODO: Fix this exercise. Run "clings hint" for help.
-
+for(int i=0;i<=100;i++){
+    sum+=i;
+}
+printf("sum = %d\n",sum);
     return 0;
 }

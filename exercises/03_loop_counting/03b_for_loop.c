@@ -6,7 +6,7 @@
  *                  "新增一个变量 sum，对从 1 加到 10 进行求和"
  *
  * 任务：完成以下程序：
- *       1. 用 for 循环从 10 倒数到 1，打印 "counter = %d\n"
+ *       1. 用 for 循环从 10倒数到 1，打印 "counter = %d\n"
  *       2. 用 do-while 循环计算 sum = 1+2+...+10
  *       3. 打印 "sum = %d\n" (结果应为 55)
  *
@@ -18,10 +18,14 @@
 int main(void) {
     int i;
     int sum = 0;
-
-#error TODO: Fix this exercise. Run "clings hint" for help.
-
-#error TODO: Fix this exercise. Run "clings hint" for help.
-
+    for(i=10;i>=1;i--){
+        printf("counter = %d\n",i);
+    }
+    int j=1;
+    do{
+        sum+=j;
+        j++;
+    }while(j<=10);
+    printf("sum = %d\n",sum);
     return 0;
 }

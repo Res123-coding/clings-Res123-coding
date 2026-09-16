@@ -16,8 +16,12 @@
 int count_bits(int num) {
     int sum = 0;
     int i;
-
-#error TODO: Fix this exercise. Run "clings hint" for help.
+    for(i=0;i<sizeof(int)*8;i++){
+    
+    if((num>>i)&0x01) {
+        sum++;
+    }
+}
     return sum;
 }
 
